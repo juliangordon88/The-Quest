@@ -26,7 +26,7 @@ METEOR_SPEED = 1
 
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 100, 80
 
-YELLOW_HIT = pygame.USEREVENT + 1
+#YELLOW_HIT = pygame.USEREVENT + 1
 
 
 cometa_sin_girar = pygame.image.load(os.path.join('imagenes', 'cometa.png'))
@@ -98,10 +98,6 @@ class Meteor(pygame.sprite.Sprite):
           
 
 
-
-
-
-
 def draw_window(yellow, yellow_bullets, yellow_health): #red_health, yellow_health
         x = 0
 
@@ -152,6 +148,7 @@ def main():
     yellow_health = 5
 
     all_sprites.update()
+    
 
 
     all_sprites.draw(WIN)
