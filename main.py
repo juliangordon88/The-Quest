@@ -7,10 +7,8 @@ from random import *
 WIDTH, HEIGHT = 900, 500
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-#RED = (255, 0 , 0)¡
 YELLOW = (255, 255, 0)
 
-#BORDER = pygame.Rect(WIDTH//2 -5, 0, 10, HEIGHT)
 
 BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join('imagenes', 'colision.mp3'))
 BULLET_FIRE_SOUND = pygame.mixer.Sound(os.path.join('imagenes', 'disparo.mp3'))
@@ -193,75 +191,3 @@ if __name__ == "__main__":
 
 
 
-#if event.key == pygame.K_RCTRL and len(red_bullets) < MAX_BULLETS:
-                 #   bullet = pygame.Rect(red.x, red.y + red.height//2 -2, 10, 5)
-                  #  red_bullets.append(bullet)
-                   # BULLET_FIRE_SOUND.play()
-
-            #if event.type == RED_HIT:
-             #  red_health -= 1
-              # BULLET_HIT_SOUND.play()
-            #if event.type == YELLOW_HIT:
-             #  yellow_health -= 1
-              # BULLET_HIT_SOUND.play()
-                  
-          
-
-
-"""
-
-class Meteoritos(pygame.sprite.Sprite):
-     def __init__(self):
-          super().__init__()
-          self.img_aleatoria = random.randrange(3)
-          if self.img_aleatoria == 0:
-               self.image = pygame.transform.scale(cometa.convert(), (100,100))
-               self.radius = 50
-          if self.img_aleatoria == 1:
-               self.image = pygame.transform.scale(cometa.convert(), (50,50))
-               self.radius = 25
-          if self.img_aleatoria == 2:
-               self.image = pygame.transform.scale(cometa.convert(), (25,25))
-               self.radius = 12
-          self.image.set_colorkey(BLACK)
-          self.rect = self.image.get_rect()
-          self.rect.x = random.randrange(WIDTH - self.rect.width)
-          self.rect.y = -self.rect.width
-          self.velocidad_y = random.randrange(1, 10)
-
-     def update(self):
-          self.rect.y += self.velocidad_y
-          if self.rect.top > HEIGHT:
-               self.rect.x = random.randrange(WIDTH - self.rect.width)
-               self.rect.y = -self.rect.width
-               self.velocidad_y = random.randrange(1, 10)
-
-     
-meteoritos = pygame.sprite.Group()
-
-for x in range(10):
-     meteorito = Meteoritos()
-     meteoritos.add(meteorito)
-"""
-
-                        
-
-"""def draw_winner(text):
-      draw_text = WINNER_FONT.render(text, 1, WHITE)
-      WIN.blit(draw_text,(WIDTH/2 - draw_text.get_width()/2, HEIGHT - draw_text.get_width() /2))
-      pygame.display.update()
-      pygame.time.delay(5000)"""
-
-
-
-
-
-
-"""winner_text = ""
-if red_health <= 0:
-     winner_text = "Yellow Wins!"
-if yellow_health <= 0:
-               winner_text = "Red Wins!"
-if winner_text != "":
-     draw_winner(winner_text)
-     break  """                    
