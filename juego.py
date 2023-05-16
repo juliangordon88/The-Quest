@@ -65,10 +65,13 @@ class Meteorito(pygame.sprite.Sprite):
         self.imagen = IMAGEN_METEORITO
         self.rect = self.imagen.get_rect()
         self.rect.x = ANCHO
-        self.rect.y = Random.randint(0, ALTO - self.rect.height)
+        #self.rect.y = random.randint(0, ALTO - self.rect.height)
 
     def update(self):
         self.rect.x -= VEL_METEORO
+        if self.rect.x < 0:
+            self.rect.x = ALTO
+            self.rect.y = Random.randint(0, ALTO - self.rect.height)
 
 
 all_sprites = pygame.sprite.Group()
@@ -76,10 +79,10 @@ nave = Nave()
 all_sprites.add(nave)
 
 lista_meteoritos = pygame.sprite.Group()
-#for i in range(10):
-  #  meteor = Meteorito()
-   # lista_meteoritos.add(meteor)
-   # all_sprites.add(meteor)
+for i in range(10):
+    meteor = Meteorito()
+    lista_meteoritos.add(meteor)
+    all_sprites.add(meteor)
 
 clock = pygame.time.Clock()
 
